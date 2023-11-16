@@ -1,0 +1,144 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{318CE7} \Huge{\textbf{Srijan Das}} \\[6pt]
+\\
+\textcolor[HTML]{4B28A4}{\underline{\href{mailto:dassrijan16@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} dassrijan16@gmail.com}} $|$}
+\textcolor[HTML]{4B28A4}{\href{tel:+919415333270}{\raisebox{-0.05\height}{\faMobile} +919415333270}}
+
+\textcolor[HTML]{4B28A4}{\underline{\href{https://github.com/thisIsSrijan}{\raisebox{-0.05\height}{\faGithub} github.com/thisIsSrijan}} $|$}
+\textcolor[HTML]{4B28A4}{\underline{\href{https://www.linkedin.com/in/srijan-das-04675224b}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/srijan-das}}}
+\end{tabularx}
+
+\color[HTML]{318CE7}\section{\textbf{Skills}}
+\color[HTML]{1C033C}\textbf{Languages:} \\[2pt]
+\color[HTML]{1C033C} \hspace*{4ex} Java, C, Javascript, SQL, HTML, CSS, Bootstrap, MERN stack, NextJs (basic)\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies \& Tools:} \\[2pt]
+\color[HTML]{1C033C} \hspace*{4ex} Git and Github, Linux, Postman\\[3pt]
+
+
+% Education
+\color[HTML]{318CE7}\section{\textbf{Education}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{The LNM Institute of Information Technology (LNMIIT)} & \hfill \color[HTML]{1C033C} Expected graduation date: Jun. 2026 \\
+\color[HTML]{1C033C} B.tech. in Computer Science and Engineering   & \hfill \color[HTML]{4B28A4} \textit{\textbf{GPA: 6.92/10}} \\
+\multicolumn{2}{@{}X@{}}{ \color[HTML]{1C033C}Relevant Courses: Database Management System (SQL - MySQL), OOP (JAVA), \newline \hspace*{16ex} Algorithms and Data Structures (C)}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{St. Paul's School $|$ Intermediate (ISC)} & \hfill \color[HTML]{1C033C} May 2021 \\
+\color[HTML]{1C033C} Physics , Chemistry and Mathematics   & \hfill \color[HTML]{4B28A4} \textit{\textbf{Grade: 94 \%}} \\
+\multicolumn{2}{@{}X@{}}{}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{St. Paul's School | High-School (ICSE)} & \hfill \color[HTML]{1C033C} May 2019 \\
+\color[HTML]{1C033C} Science and Mathematics  & \hfill \color[HTML]{4B28A4} \textit{\textbf{Grade: 90.2\%}} \\
+\multicolumn{2}{@{}X@{}}{}
+\end{tabularx}
+
+
+%Experience
+\color[HTML]{318CE7}\section{\textbf{Experience}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C}\textbf{\uline{ Hierarchical Faculty Management System}} \hfill \color[HTML]{1C033C} Oct. 2023 - Present\\[4pt]
+\color[HTML]{1C033C}\textbf{\textit{Back-End Developer}}\ \hfill \color[HTML]{4B28A4} \textit{NodeJs, Express, Sequelize, MySQL, Git, GitHub} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+      \color[HTML]{1C033C}  \item Contributing to my college's IDAAR Cell Software,  a hierarchical data management software, granting \textbf{RBAC} to faculties read access, HODs read and write permissions for their departments, and providing the Admin with view access to all data.
+        \item As a Backend Developer, I architect and maintain a three-tiered hierarchical structure enabling secure data management for faculties, Head of Departments (HODs), and the Admin (Director)
+    \end{itemize}
+\end{minipage}\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{Webiste for LCTBI\& EL}} \hfill \color[HTML]{1C033C} May 2023 - Jul. 2023 \\[4pt]
+\color[HTML]{1C033C}\textbf{\textit{Full-Stack Internee}} \hfill \color[HTML]{4B28A4} \textit{JavaScript, React, HTML, CSS, Bootstrap} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+       \color[HTML]{1C033C} \item Contributed in designing the website UI and handled the functionalities.
+    \end{itemize}
+    \end{minipage}\end{tabularx}
+
+% Projects
+\color[HTML]{318CE7}\section{\textbf{Projects}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/thisIsSrijan/User-Authentication}{User Authentication System}}} \hfill \color[HTML]{1C033C} Sep. 2023 - Oct. 2023 \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \color[HTML]{1C033C}\item Created a user authentication system utilizing \textbf{PassportJS} and \textbf{Bcrypt}, ensuring the secure verification of registered users and facilitating access to their designated dashboards upon validation
+    \end{itemize}
+    \end{minipage}\end{tabularx}
+
+
+% Leadership and Volunteering
+\color[HTML]{318CE7}\section{\textbf{Leadership and Volunteering}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Google Developer's Student Club} \hfill \color[HTML]{1C033C} Jul. 2023 - Ongoing \\[5pt]
+\color[HTML]{1C033C}\textbf{\textit{Core Member}} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \color[HTML]{1C033C}\item Learning, collaborating, and contributing to the world of development with fellow enthusiasts and experts.
+       \color[HTML]{1C033C} \item Orchestrating workshops, coding sessions, and events to enhance skills and encourage open-source learning.
+    \end{itemize}
+\end{minipage}\end{tabularx}
+\end{document}
